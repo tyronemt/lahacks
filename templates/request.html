@@ -5,7 +5,7 @@
 <br>
 
 <body>
-	<form action ="/register" style="width:500px; margin:auto" method="POST">
+	<form action ="/prescribe" style="width:500px; margin:auto" method="POST">
 	<div class="form-group">
 		<h2>Please Verify Patient Information Before Continuing</h2>
 		<span class="input-group-text" id="basic-addon1">Please Input Patient's First Name and Last Name: </span>
@@ -14,13 +14,9 @@
 	<span class="input-group-text" id="basic-addon1">Please Input Patient's Birthday: </span>
 		<input type="text" name="bday" id="bday" class="form-control" placeholder="MMDDYYYY">
 	</div>
-	<span class="input-group-text" id="basic-addon1">Please Input Patient's Last Four Digits Of Their Social Security: </span>
-		<input type="text" name="social" id="social" class="form-control" placeholder="XXXX">
-	</div>
 	<center><button type="submit" class="btn btn-primary" style="width:250px; margin:auto">Verify</button></center>
 	</form>
 </body> 
 
 {% endblock %}
-
 

@@ -21,15 +21,15 @@ def map():
 
 @app.route('/login')
 def login():
-    return render_template('home.html')
+    return render_template('request.html')
 
 @app.route('/register')
 def register():
-    return render_template('home.html')
+    return render_template('register.html')
 
 @app.route('/request')
 def request():
-    return render_template('home.html')
+    return render_template('requesting.html')
 
 @app.route('/donate')
 def donate():
