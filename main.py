@@ -14,6 +14,27 @@ app = Flask(__name__)
 def base():
     return render_template('home.html')
 
+@app.route('/map')
+def map():
+    return render_template('home.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('home.html')
+
+@app.route('/register')
+def register():
+    return render_template('home.html')
+
+@app.route('/request')
+def request():
+    return render_template('home.html')
+
+@app.route('/donate')
+def donate():
+    return render_template('home.html')
+
 
 # @app.route("/sms", methods=['GET', 'POST'])
 # def incoming_sms():
@@ -57,42 +78,6 @@ def base():
 #         resp.message("Invalid response")
 
 #     return str(resp)
-
-def refresh_all():
-    for p in classes.prescribed.keys():
-        for i in classes.patients:
-            if p.split(" ")[0] == i.firstname and p.split(" ")[1] == i.lastname:
-                current = i
-                current.taken = False
-
-def scheduledTask():
-    global t
-    for p in classes.prescribed.keys():
-        for i in classes.patients:
-            if p.split(" ")[0] == i.firstname and p.split(" ")[1] == i.lastname:
-                current = i
-                current.drug.counter += 7
-                if current.taken == False and t == 0 and current.drug.counter >= current.drug.usage:
-                    ps.send(current)
-                    t += 1
-                    current.drug.counter = 0
-                elif current.taken == False and t >= 1 and current.drug.counter >= current.drug.usage:
-                    ps.second(current)
-                    current.taken = True
-                    t = 0
-                    current.drug.counter = 0
-    al = True
-    for p in classes.prescribed.keys():
-        for i in classes.patients:
-            if p.split(" ")[0] == i.firstname and p.split(" ")[1] == i.lastname:
-                current2 = i
-                if current2.taken == False:
-                    al  = False
-    if al:
-        refresh_all()
-        t = 0 
-
-    
 
                 
 
