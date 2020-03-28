@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Register Page{% endblock %}
+{% block content %}
+
+<br>
+
+<body>
+	<form action ="/register" style="width:500px; margin:auto" method="POST">
+	<div class="form-group">
+		<h2>Patient Registration</h2>
+		<span class="input-group-text" id="basic-addon1">Please Input Patient's First Name and Last Name: </span>
+		<input type="text" name="name" id="name" class="form-control" placeholder="Peter Anteater">
+	<br>
+
+	<span class="input-group-text" id="basic-addon1">Please Input Patient's Birthday: </span>
+		<input type="text" name="bday" id="bday" class="form-control" placeholder="MMDDYYYY">
+
+	<br>
+
+	<span class="input-group-text" id="basic-addon1">Please Input Patient's Phone Number: </span>
+		<input type="text" name="number" id="number" class="form-control" placeholder="5555555555">
+
+	</div>
+	<center><button type="submit" class="btn btn-primary" style="width:250px; margin:auto">Register Patient</button></center>
+	</form>
+</bodystyle="background-color: #686a9d> 
+
+{% endblock %} 

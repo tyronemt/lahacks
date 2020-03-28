@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style> 
+      
+    .container{
+        vertical-align: middle;
+        font-family: 'Georgia';
+        color: black
+        font-weight: bold}
+    .fill-height{
+        padding-top: 225px;
+        padding-bottom: 250px; 
+        min-height: 100%;
+        height:100vh;
+        }
+    body{ 
+        font-size: 56
+        
+    }
+
+    h1{
+        color: white;
+        font-size: 100;
+        text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    }
+
+    h3{
+        color:powderblue;
+        font-size: 75;
+        text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    }
+
+      </style>
+</head>
+<center><body style = "background: url('/static/tree.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; overflow: hidden;">
+    <div class="container fill-height">
+        <div class="row">
+         <div class="col-lg-1"></div>
+         <div class="col-lg-10">
+           <h1 style="text-align:center; font-size:75px" f>Welcome to MediText</h1>
+           <h3 style="text-align:center;" f><i>Are You a Doctor or a Patient?</i></h3>
+           <br>
+        <a class="btn btn-primary btn-sm" href="login" role="button" style="width:100px; font-size:18px">Doctor</a> &emsp;
+        <a class="btn btn-primary btn-sm" href="prescribe" role="button" style="width:100px; font-size:18px">Patient</a>
+         </div>
+        <div class="col-lg-1"></div>
+     </div>
+   </div>
+</body></center>
+
+{% endblock %}
